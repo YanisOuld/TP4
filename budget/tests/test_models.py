@@ -11,7 +11,7 @@ class TestModels(TestCase):
 		)
 
 	def test_project_is_assigned_slug_on_creation(self):
-		self.assertEquals(self.project1.slug, 'project-1')
+		self.assertEqual(self.project1.slug, 'project-1')
 		#self.assertEquals(self.project1.slug, 'project+1')
 
 
@@ -34,10 +34,9 @@ class TestModels(TestCase):
 			title= 'expense2',
 			amount=2000,
 			category=category1
-
 		)
 
-		self.assertEquals(self.project1.budget_left, 7000)
+		self.assertEqual(self.project1.budget_left, 7000)
 		#self.assertEquals(self.project1.budget_left, 8000)
 
 		
